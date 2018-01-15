@@ -8,7 +8,11 @@
   <body>
       <img src="images/image.jpg" id="image" />
       <script>
-
+$(document).ready(function(){
+    $("img").dblclick(function(){
+        $(this).css('width', '500px');
+    });
+});
       </script>
   </body>
 </html>

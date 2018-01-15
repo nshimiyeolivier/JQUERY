@@ -16,7 +16,17 @@
   <div class="color blue" id="blue"></div>
 </div>
 <script>
-
+$(document).ready(function(){
+    $("#green").click(function(){
+        $('p').css('color','green');
+    });
+        $("#red").click(function(){
+        $('p').css('color', 'red');
+    });
+           $("#blue").click(function(){
+        $('p').css('color', 'blue');
+    });
+});
 </script>
 </body>
 </html>

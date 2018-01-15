@@ -38,29 +38,50 @@
 			</ol>
 		</div>
 		
-		<script type="text/javascript" src="jquery.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js">
+</script>
 		<script>
 			$(document).ready(function(){
 				/* agrandir la police de caractères (120%) */
+                $("ol li:first-child").click(function(){
+                $("#contenu").css('font-size', '120%')
+                                                  });
 				
-				
+                
 				/* diminuer la police de caractères (80%) */
-		
+          $("ol li:nth-child(2)").click(function(){
+                $("#contenu").css('font-size', '80%')
+                                                  });
 				
 				/* mettre en gras ou remettre en normal les mots en vert */
-
-				
+    
+        $("ol li:nth-child(3)").toggle(
+        function(){$(".vert").css({"font-weight": "bold"});},
+        function(){$(".vert").css({"font-weight": "400"});
+           });
+        
 				/* souligner ou remettre en normal les mots en rouge */
-			
+            $("ol li:nth-child(4)").toggle(
+        function(){$(".rouge").css({"text-decoration": "underline"});},
+        function(){$(".rouge").css({"text-decoration": "none"});
+           });
+        
 				
 				/* remplacer le logo par une autre image au survol */
-				
-				
+                
+   $("ol li:nth-child(5)").mouseenter(function(){
+        $("img").hide();
+    });
+ /*   $("p").mouseleave(function(){
+        $("p").css("background-color", "lightgray");
+    });*/
+			
 				/* Afficher l'URL des liens dans une infobulle lors du survol des liens */
 				
 				/* ajouter "Chapitre 1 :" devant le 1er titre h2<br>et "Chapitre 2 :" devant le 2ème titre h2 */
 				
 			});
+            
 		</script>
 	</body>
 </html>	

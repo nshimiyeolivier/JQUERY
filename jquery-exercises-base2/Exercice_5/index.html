@@ -13,16 +13,14 @@
   </form>
   <script>
   //A partir de maintenant, nous enfermerons à chaque fois l’intégralité de notre code jQuery à l’intérieur du gestionnaire d’évènement ready pour éviter tout problème d’exécution du code.
-    $(document).ready(function(){
-      $("input").focus(function(){
-    $(this).css("border": "1px solid green");
-        });
-
-     $("input").blur(function(){
-    $(this).css("border": "1px solid red");
+$(document).ready(function(){
+    $("input").focus(function(){
+        $(this).css("border", "1px solid green");
     });
+    $("input").blur(function(){
+        $(this).css("border", "1px solid red");
     });
-
+});
   </script>
 </body>
 </html>
