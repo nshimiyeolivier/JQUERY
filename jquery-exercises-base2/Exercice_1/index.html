@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="jquery-2.2.4.js"></script>
+  <title>Exercice 1</title>
+</head>
+<body>
+  <form>
+    <button type="button" name="button" id="clique-moi" >Clique-moi !</button>
+  </form>
+  <script>
+  //A partir de maintenant, nous enfermerons à chaque fois l’intégralité de notre code jQuery à l’intérieur du gestionnaire d’évènement ready pour éviter tout problème d’exécution du code.
+    $(document).ready(function(){
+      $("#clique-moi").click(function(){
+              alert("tu l'as fait! LOL");
+    });
+  </script>
+</body>
+</html>
