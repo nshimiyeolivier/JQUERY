@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> Conteur de clicks</title>
+</head>
+<body>
+<p><button onclick="contrdecliqueplus()" type="button">+</button></p>
+<p><button onclick="contrdecliquemoins()" type="button">-</button></p>
+<div id="result"></div>
+
+<script>
+function contrdecliqueplus() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.contrdecliqueplus) {
+            localStorage.contrdecliqueplus = Number(localStorage.contrdecliqueplus)+1;
+        } else {
+            localStorage.contrdecliqueplus = 1;
+        }
+        document.getElementById("result").innerHTML = localStorage.contrdecliqueplus + " foix.";
+    } else {
+        document.getElementById("result").innerHTML = "Désole, votre navigateur ne supporte pas le stockage web :(";
+    }
+}
+
+function contrdecliquemoins() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.contrdecliqueplus) {
+            localStorage.contrdecliqueplus = Number(localStorage.contrdecliqueplus)-1;
+        } else {
+            localStorage.contrdecliquemoins = 1;
+        }
+        document.getElementById("result").innerHTML = localStorage.contrdecliqueplus + " foix.";
+    } else {
+        document.getElementById("result").innerHTML = "Désole, votre navigateur ne supporte pas le stockage web :(";
+    }
+}
+</script>
+</body>
+</html>

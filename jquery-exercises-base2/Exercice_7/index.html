@@ -8,7 +8,7 @@
 	<body>
 		<h1>jQuery : Exercice 1</h1>
 		<div id="contenu">
-			<img src="jquery-logo.png" />
+			<img class='images' src="jquery-logo.png" />
 			<h2>Qu'est-ce-que jQuery ?</h2>
 			<p>jQuery est une bibliothèque <span class="rouge">JavaScript</span> libre et multi-plateforme créée pour faciliter l'écriture de <a href="https://fr.wikipedia.org/wiki/Client_Side_Scripting">scripts côté client</a> dans le code <span class="vert">HTML</span> des pages web.</p>
 			<p>La première version est lancée en janvier 2006 par <a href="https://fr.wikipedia.org/wiki/John_Resig">John Resig</a>.</p>
@@ -68,9 +68,10 @@
         
 				
 				/* remplacer le logo par une autre image au survol */
+                $(".images").append("<img id='imgoverlay' src='cat.jpg'/>");
                 
    $("ol li:nth-child(5)").mouseenter(function(){
-        $("img").hide();
+        
     });
  /*   $("p").mouseleave(function(){
         $("p").css("background-color", "lightgray");

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> Conteur de clicks</title>
+</head>
+<body>
+<p><button onclick="contrdeclique()" type="button">Click moi!</button></p>
+<div id="result"></div>
+<p>Clique sur le bouton pour voir le nombre des clicks!</p>
+
+<script>
+function contrdeclique() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.contrdeclique) {
+            localStorage.contrdeclique = Number(localStorage.contrdeclique)+1;
+        } else {
+            localStorage.contrdeclique = 1;
+        }
+        document.getElementById("result").innerHTML = "vous avez clique le bouton  " + localStorage.contrdeclique + " foix.";
+    } else {
+        document.getElementById("result").innerHTML = "Désole, votre navigateur ne supporte pas le stockage web :(";
+    }
+}
+</script>
+</body>
+</html>
