@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+  rect{
+    width: 550px;
+    height: 150px;
+    stroke-width : 6px;
+    stroke: black;
+    fill: white;
+  }
+</style>
+</head>
+<body>
+
+<div class="boutons">
+  <button id="btn1"> BOUTON 1 </button>
+  <button id="btn2"> BOUTON 2 </button>
+  <button id="btn3"> BOUTON 3 </button>
+  <button id="btn4"> BOUTON 4 </button>
+  <button id="btn5"> BOUTON 5 </button>
+</div>
+<br />
+
+<div class="image">
+  <svg width="700" height="400">
+    <rect id="rectangle" />
+  </svg>
+</div>
+
+<script>
+
+$(document).ready(function(){
+    $("#btn1").on({
+      
+        click: function(){
+            $('#rectangle').css('height', '165');
+        },
+    });
+
+    $("#btn2").on({
+        click: function(){
+            $('#rectangle').css('fill', 'green');
+        },
+    });
+
+    $("#btn3").on({
+        click: function(){
+            $('#rectangle').css('fill', 'white');
+        },
+    });
+
+    $("#btn4").on({
+        click: function(){
+            $('#rectangle').hide();
+        },
+    });
+
+    $("#btn5").on({
+        click: function(){
+            $('#rectangle').show();
+        },
+    });
+
+});
+</script>
+</body>
+</html>
