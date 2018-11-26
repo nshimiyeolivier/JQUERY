@@ -1,0 +1,11 @@
+.bordure{
+  display: inline-block;
+  border: 2px solid red;
+  padding: 5px;
+}
+
+.bttop{
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+}
